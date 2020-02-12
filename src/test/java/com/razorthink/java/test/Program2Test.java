@@ -9,6 +9,7 @@ public class Program2Test {
         @Test
         public void test() {
             Program2 p = new Program2();
-            assertTrue(p.main());
+           assertTrue(p.main());
         }
+
 }
