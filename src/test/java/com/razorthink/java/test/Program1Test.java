@@ -10,6 +10,6 @@ public class Program1Test {
     public void test()
     {
         Program1 p = new Program1();
-        assertTrue(p.main());
+        assertTrue(p.main(24));
     }
 }
