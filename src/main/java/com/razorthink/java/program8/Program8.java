@@ -5,7 +5,7 @@ public class Program8 {
         int a = Integer.parseInt(args[0]);
         int b = Integer.parseInt(args[1]);
 
-        int arr[] = {5,10,15,20,25};
+        int arr[] =new int[] {5,10,15,20,25};
         boolean flag=false;
 
         for(int i=0;i<arr.length;i++)
@@ -23,7 +23,8 @@ public class Program8 {
                 break;
             }
         }
-        return false;
+        System.out.println("Its not a Bingo!!");
+        return true;
 
     }
 }
