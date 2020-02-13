@@ -5,9 +5,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
+//Testcase that checks for correct input and passes
 public class TwoElementsSumTest2 {
     @Test
-    public void test()
+    public void testSuccess()
     {
         TwoElementsSum t = new TwoElementsSum();
         assertTrue(t.calculateSum(new int[]{10,5,2,6,4,10},20));
