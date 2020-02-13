@@ -20,7 +20,7 @@ public class TwoElementsSum {
         Arrays.sort(arr);
 
         //find whether the sum of two numbers is equal to the mentioned value
-        //if sum of two numbers is not equal to value then print sum and return true;
+
         while(left<right)
         {
             if(arr[left]+arr[right]==sum) {
