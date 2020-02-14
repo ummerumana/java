@@ -5,15 +5,14 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-//
-public class MinMovesSnakeLadderTest {
+public class MinMovesSnakeLadderTest1 {
     @Test
     public void testSuccess()
     {
         MinMovesSnakeLadder obj = new MinMovesSnakeLadder();
 
-        int res = obj.getMinDiceThrows(30);
+        int res = obj.getMinDiceThrowswithSnake(30);
         System.out.println("min number of throws required are " + res);
-        assertEquals(3,res);
+        assertEquals(4,res);
     }
 }

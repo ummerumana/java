@@ -6,13 +6,13 @@ package com.snakeLadder;
 
 
 public class MinMovesSnakeLadder {
-    int N = 30;
-    int move[] = new int[N];
+    int n = 30;
+    int[] move = new int[n];
 
     // this block is to initialize the move array with the initial value
     // that shows the snakes and ladder cells
-    {
-        for (int i = 0; i < N; i++)
+    public MinMovesSnakeLadder(){
+        for (int i = 0; i < n; i++)
             move[i] = -1;
 
         // Ladders
@@ -30,11 +30,12 @@ public class MinMovesSnakeLadder {
     public int getMinDiceThrows(int n) {
         int count =0;
         int i=0;
-        for(;i<n;)
+        while(i<n)
         {
             //if we are on last cell that is 30 then we are done and return count value
-            if(i==n-1)
+            if(i==n-1) {
                 return count;
+            }
 
             int max =0;
             int j=1;
@@ -59,8 +60,53 @@ public class MinMovesSnakeLadder {
                 count++;
             }
         }
-
         return count;
     }
 
+    public static void main(String[] args) {
+        new MinMovesSnakeLadder().getMinDiceThrowswithSnake(30);
+    }
+    public int getMinDiceThrowswithSnake(int n) {
+        boolean flag =false;
+        int count =0;
+        int i=0;
+        while(i<n)
+        {
+            //if we are on last cell that is 30 then we are done and return count value
+            if(i==n-1) {
+                return count;
+            }
+
+            int max =0;
+            int j=1;
+
+            //loop which runs from 1 to 6 and calculates max cells we can move
+            for(;i+j<n&&j<=6;j++)
+            {
+                if(flag==false && move[i+j]<i+j && move[i+j]!=-1)
+                {
+                    flag=true;
+                    max=move[i+j];
+                    i-=max;
+                    count++;
+                    break;
+                }
+                if(move[i+j]>max)
+                {
+                    max=move[i+j];
+                }
+            }
+            //if there is no ladder then increment i with max number on the dice
+            if(max==0)
+            {
+                i+=j-1;
+                count++;
+            }
+            else if(flag==false) {
+                    i+= max;
+                    count++;
+             }
+        }
+        return count;
+    }
 }

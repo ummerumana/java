@@ -15,7 +15,8 @@ public class TwoElementsSum {
 
     public boolean calculateSum(int[] arr,int sum)
     {
-        int left=0,right=arr.length-1;
+        int left=0;
+        int right=arr.length-1;
         //sorting the array using Arrays.sort()
         Arrays.sort(arr);
 
